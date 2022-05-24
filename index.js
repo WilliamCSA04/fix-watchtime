@@ -77,4 +77,6 @@ app.get("/", async function (_, res) {
   }
 });
 
-app.listen(5000);
+app.set("port", 5000);
+
+app.listen(app.get("port"));
