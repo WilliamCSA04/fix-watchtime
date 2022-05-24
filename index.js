@@ -38,6 +38,7 @@ function handleTime(time = "") {
       let timeValue = timeObj[key];
       if (acc.overflow && timeValue) {
         timeValue += acc.overflow;
+        acc.overflow = 0;
       } else if (!timeValue) {
         timeValue = 0;
       }
@@ -73,7 +74,7 @@ app.get("/", async function (_, res) {
     res.send(time);
   } catch (err) {
     console.error(err);
-    res.send("Não foi possivel calcular o tempo de Anddyy_sz");
+    res.send("Não foi possivel calcular o tempo de Andyy_sz");
   }
 });
 
