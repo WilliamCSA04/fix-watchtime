@@ -47,10 +47,8 @@ function handleTime(time = "", originalTimer) {
       [key]: value
     }
   }, {})
-  const finalTimer = Object.entries(adaptedTime).reduce((acc, [key, value]) => {
-    const time = originalTimer[key.toUpperCase()] + Number(value);
-    console.log("value", value)
-    console.log("key", originalTimer[key.toUpperCase()])
+  const finalTimer = Object.entries(originalTimer).reduce((acc, [key, value]) => {
+    const time = Number(adaptedTime[key.toLowerCase()] || 0) + Number(value);
     if(acc) {
       return `${acc}, ${key}: ${time}`
     }
