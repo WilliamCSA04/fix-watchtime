@@ -78,6 +78,19 @@ app.get("/", async function (_, res) {
   }
 });
 
+app.get("/leona", async function (_, res) {
+  try {
+    const { data } = await axios.get(
+      "https://decapi.me/twitch/followage/misthy/pequenaleona?precision=10"
+    );
+    const time = handleTime(data);
+    res.send(time);
+  } catch (err) {
+    console.error(err);
+    res.send("Não foi possivel calcular o tempo de Pequenaleona");
+  }
+});
+
 app.set("port", process.env.PORT || 5000);
 
 app.listen(app.get("port"));
