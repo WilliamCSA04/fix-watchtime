@@ -50,9 +50,9 @@ function handleTime(time = "", originalTimer) {
   const finalTimer = Object.entries(originalTimer).reduce((acc, [key, value]) => {
     const time = Number(adaptedTime[key.toLowerCase()] || 0) + Number(value);
     if(acc) {
-      return `${acc}, ${key}: ${time}`
+      return `${acc}, ${key.toLocaleLowerCase()}: ${time}`
     }
-    return `${key}: ${time}`
+    return `${key.toLocaleLowerCase()}: ${time}`
   }, "")
   return finalTimer;
 }
