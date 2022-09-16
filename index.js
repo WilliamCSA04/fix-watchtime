@@ -52,7 +52,7 @@ function handleTime(time = "", originalTimer) {
     if(acc) {
       return `${acc}, ${key.toLocaleLowerCase()}: ${time}`
     }
-    return `${key.toLocaleLowerCase()}: ${time}`
+    return `Followage: ${key.toLocaleLowerCase()}: ${time}`
   }, "")
   return finalTimer;
 }
