@@ -14,9 +14,9 @@ const ANDY = {
 
 const LEONA = {
   YEARS: 0,
-  MONTHS: 5,
+  MONTHS: 6,
   WEEKS: 0,
-  DAYS: 9,
+  DAYS: 18,
   HOURS: 0,
   MINUTES: 0,
   SECONDS: 0,
