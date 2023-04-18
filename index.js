@@ -13,8 +13,8 @@ const ANDY = {
 };
 
 const LEONA = {
-  YEARS: 0,
-  MONTHS: 6,
+  YEARS: 1,
+  MONTHS: 1,
   WEEKS: 0,
   DAYS: 18,
   HOURS: 0,
